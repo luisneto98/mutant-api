@@ -1,0 +1,1 @@
+export const userDataUrl = process.env.USER_DATA_URL || '';

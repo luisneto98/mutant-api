@@ -1,0 +1,29 @@
+version: '3.6'
+services:
+  database:
+    container_name: mutant-database
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: mutant
+      MYSQL_ROOT_PASSWORD: mutant123
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: mutant123
+    volumes:
+      - ./.data/postgresql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+  
+  web:
+    container_name: mutant-api
+    build: .
+    ports:
+      - "3000:3000"
+      - "3229:9229"
+    env_file:
+      - .env
+    volumes:
+      - .:/server
+    depends_on:
+      - database
+    links:
+      - database
