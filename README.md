@@ -12,6 +12,10 @@ Aplicação para recuperar e salvar usuários, filtrando os que estão em suíte
 ### Rodando o projeto
 Abra a pasta do projeto após ter feito o clone e execute o comando:
 ```
+cp .env.example .env
+```
+depois:
+```
 yarn
 ```
 
