@@ -7,15 +7,9 @@ export class DownloadService {
   constructor(private readonly httpService: HttpService) {}
 
   public async loadUserJson(): Promise<IUserJson[]> {
-    try {
-      const { data } = await this.httpService
-        .get<IUserJson[]>(userDataUrl)
-        .toPromise();
-      return data;
-    } catch (err) {
-      if(err?.response?.status === 404)
-        throw new NotFoundException('resource-not-found')
-      throw err;
-    }
+    const { data } = await this.httpService
+      .get<IUserJson[]>(userDataUrl)
+      .toPromise();
+    return data;
   }
 }

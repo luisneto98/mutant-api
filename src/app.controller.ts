@@ -1,11 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
-import { ApiProperty, ApiTags } from '@nestjs/swagger';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
 @ApiTags('Health Check')
 @Controller()
 export class AppController {
   @Get()
-  @ApiProperty({ description: 'route to check the server' })
+  @ApiResponse({ status: 200, description: "will respond 'alive' if the service is running" })
   healthCheck(): string {
     return 'alive';
   }

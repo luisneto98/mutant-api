@@ -1,9 +1,9 @@
-import { IUserJson } from './../../dist/common/interfaces/user-json.interface.d';
+import { ICompany } from './../database/interfaces/company.interface';
+import { IAddress } from './../database/interfaces/address.interface';
+import { IUserJson } from './../database/interfaces/user-json.interface';
 import { IUser } from './../database/interfaces/user.interface';
 import { Company } from './../database/models/company.model';
 import { Address } from './../database/models/address.model';
-import { IAddress } from './../../dist/common/interfaces/address.interface.d';
-import { ICompany } from './../../dist/common/interfaces/company.interface.d';
 import { Contact } from './../database/models/contact.model';
 import { User } from './../database/models/user.model';
 import { Injectable } from '@nestjs/common';

@@ -5,9 +5,10 @@ import { UserModule } from './user/user.module';
 import { JobModule } from './job/job.module';
 import { BusinessModule } from './business/business.module';
 import { DatabaseModule } from './database/database.module';
+import { LoggerModule } from './logger/logger.module';
 
 @Module({
-  imports: [DownloadModule, UserModule, JobModule, BusinessModule, DatabaseModule],
+  imports: [DownloadModule, UserModule, JobModule, BusinessModule, DatabaseModule, LoggerModule],
   controllers: [AppController],
 })
 export class AppModule {}

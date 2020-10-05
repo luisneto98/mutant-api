@@ -1,7 +1,8 @@
 import { JobService } from './job.service';
 import { Controller, Get } from '@nestjs/common';
-import { ApiResponse } from '@nestjs/swagger';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Job')
 @Controller('job')
 export class JobController {
   constructor(private readonly jobService: JobService) {}

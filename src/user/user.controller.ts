@@ -1,4 +1,4 @@
-import { IUserJson } from './../../dist/common/interfaces/user-json.interface.d';
+import { IUserJson } from './../database/interfaces/user-json.interface';
 import { User } from './../database/models/user.model';
 import { UserRepository } from './user.repository';
 import { Body, Controller, Post } from '@nestjs/common';

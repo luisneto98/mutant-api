@@ -9,7 +9,7 @@ import { ApiResponse, ApiTags } from '@nestjs/swagger';
 export class DownloadController {
   constructor(private readonly downloadService: DownloadService) {}
 
-  @Get()
+  @Get('users')
   @ApiResponse({ status: 200, type: UserJson })
   getUsers(): Promise<IUserJson[]> {
     return this.downloadService.loadUserJson();
